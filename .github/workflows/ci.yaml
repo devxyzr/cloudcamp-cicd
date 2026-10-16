@@ -1,0 +1,9 @@
+on: # Trigger
+  push: # Evento
+jobs: 
+  Hello-world: #Identificador del job
+    runs-on: ubuntu-slim #Runner / Maquina que ejecuta
+    steps: # Paso que se va ejecutar
+      - run: echo "Hello World"
+
+    
