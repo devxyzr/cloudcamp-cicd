@@ -1,6 +1,8 @@
 name: Hello World 
 on: # Trigger
   push: # Evento
+    branches: 
+      - main
   pull_request: 
     branches: 
       - main
