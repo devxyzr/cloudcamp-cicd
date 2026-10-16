@@ -13,3 +13,9 @@ jobs:
     steps: # Paso que se va ejecutar
       - name: checkout 
         uses: actions/checkout@v7
+  job3-needs: #Identificador del job
+    runs-on: ubuntu-slim #Runner / Maquina que ejecuta
+    needs: hello-world
+    steps: # Paso que se va ejecutar
+      - name: checkout 
+        uses: actions/checkout@v7
