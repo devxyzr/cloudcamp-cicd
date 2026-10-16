@@ -8,9 +8,10 @@ jobs:
     steps: # Paso que se va ejecutar
       - name: Hello World
         run: echo "Hello World"
+      - name: TerraformCMD
+        run: terraform init
   job2: #Identificador del job
     runs-on: ubuntu-slim #Runner / Maquina que ejecuta
-    needs: job3-needs
     steps: # Paso que se va ejecutar
       - name: checkout 
         uses: actions/checkout@v7
