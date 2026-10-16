@@ -10,12 +10,13 @@ jobs:
         run: echo "Hello World"
   job2: #Identificador del job
     runs-on: ubuntu-slim #Runner / Maquina que ejecuta
+    needs: [hello-world, job3-needs]
     steps: # Paso que se va ejecutar
       - name: checkout 
         uses: actions/checkout@v7
   job3-needs: #Identificador del job
     runs-on: ubuntu-slim #Runner / Maquina que ejecuta
-    needs: hello-world
+    needs: 
     steps: # Paso que se va ejecutar
       - name: checkout 
         uses: actions/checkout@v7
